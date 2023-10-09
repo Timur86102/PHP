@@ -1,0 +1,15 @@
+{
+  "name": "gts/php",
+  "authors": [
+    {
+      "name": "gts",
+      "email": "gabbasov_ts@edu.surgu.ru"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Framework\\": "Framework"
+    }
+  },
+  "require": {}
+}
