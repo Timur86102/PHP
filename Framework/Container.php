@@ -2,7 +2,6 @@
 namespace Framework;
 class Container
 {
-
     public static function getApp(): Application
     {
         return new Application(self::getRouter());
@@ -19,6 +18,4 @@ class Container
     {
         return new Request();
     }
-
-
 }
