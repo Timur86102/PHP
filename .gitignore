@@ -2,3 +2,4 @@
 .idea
 /composer/
 composer.lock
+.env

@@ -2,6 +2,12 @@
 namespace Framework;
 class Container
 {
+
+    public function __construct()
+    {
+        $this->connection = DbConnection::getConnection();
+    }
+
     public static function getApp(): Application
     {
         return new Application(self::getRouter());
@@ -18,4 +24,5 @@ class Container
     {
         return new Request();
     }
+
 }
