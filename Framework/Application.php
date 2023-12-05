@@ -4,6 +4,7 @@ namespace Framework;
 
 class Application
 {
+
     private Router $router;
 
     public function __construct(Router $router)
@@ -13,7 +14,9 @@ class Application
 
     public function run(): void
     {
+
+
         echo print_r($this->router->getContent(), true);
-//        echo ('Текущий маршрут');
+
     }
 }

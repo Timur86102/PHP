@@ -5,16 +5,23 @@ namespace Framework;
 class Route
 {
     const METHOD_GET = 1;
-    const METHOD_POST = 2;
-    private $path;
-    private $action;
-    private $type;
 
-    public function __construct($path, $action, $type)
+    const METHOD_POST = 2;
+
+    private $path;
+
+    private $action;
+
+    private $type;
+    
+    private bool $requireAuth;
+
+    public function __construct($path, $action, $type, bool $auth = false)
     {
         $this->path = $path;
         $this->action = $action;
         $this->type = $type;
+        $this->requireAuth = $auth;
 
     }
 
@@ -48,5 +55,14 @@ class Route
     public function getType()
     {
         return $this->type;
+    }
+    public function isRequireAuth(): bool
+    {
+        return $this->requireAuth;
+    }
+
+    public function setRequireAuth(bool $requireAuth): void
+    {
+        $this->requireAuth = $requireAuth;
     }
 }
